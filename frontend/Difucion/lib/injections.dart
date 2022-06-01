@@ -1,10 +1,12 @@
 import 'package:get/get.dart';
-import 'package:login_difucion/controllers/home_controller.dart';
-import 'package:login_difucion/controllers/initial_controller.dart';
-import 'package:login_difucion/controllers/login_controller.dart';
-import 'package:login_difucion/controllers/recover_pass_controller.dart';
-import 'package:login_difucion/controllers/register_usuario_controller.dart';
-import 'package:login_difucion/controllers/users_controller.dart';
+import 'package:login_difucion/modules/home/home_controller.dart';
+import 'package:login_difucion/modules/initial/initial_controller.dart';
+import 'package:login_difucion/modules/login/login_controller.dart';
+import 'package:login_difucion/modules/recover_pass/recover_pass_controller.dart';
+import 'package:login_difucion/modules/register_user/register_usuario_controller.dart';
+import 'package:login_difucion/modules/users/users_controller.dart';
+
+import 'modules/publications/publications_controller.dart';
 
 class Injection {
   static void init() {
@@ -14,5 +16,6 @@ class Injection {
     Get.lazyPut(() => HomeController());
     Get.lazyPut(() => RecoverPasswordController());
     Get.lazyPut(() => UsersController());
+    Get.lazyPut(() => PublicationsController());
   }
 }

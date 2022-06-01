@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:login_difucion/modules/home/home_controller.dart';
 import 'package:login_difucion/styles/colors.dart';
+
+HomeController controller = HomeController();
 
 Widget buildDrawer() {
   return Drawer(
@@ -29,6 +32,7 @@ Widget buildDrawer() {
             title:
                 const Text('Usuarios', style: TextStyle(color: Colors.black)),
             hoverColor: yellowDifucion,
+            onTap: controller.goToUsers
           ),
           const Text('Red social'),
           const Divider(color: Colors.black),
@@ -44,10 +48,11 @@ Widget buildDrawer() {
               hoverColor: yellowDifucion),
           const Text('Publicaciones'),
           const Divider(color: Colors.black),
-          const ListTile(
-              leading: Icon(Icons.list, color: Colors.black),
-              title: Text('Lista', style: TextStyle(color: Colors.black)),
-              hoverColor: yellowDifucion),
+          ListTile(
+              leading: const Icon(Icons.list, color: Colors.black),
+              title: const Text('Lista', style: TextStyle(color: Colors.black)),
+              hoverColor: yellowDifucion,
+              onTap: controller.goToPublications),
           const ListTile(
               leading: Icon(Icons.emoji_emotions, color: Colors.black),
               title: Text('Reacciones', style: TextStyle(color: Colors.black)),

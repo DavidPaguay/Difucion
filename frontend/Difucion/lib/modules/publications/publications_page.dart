@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:login_difucion/controllers/home_controller.dart';
 import 'package:login_difucion/modules/publications/publications_controller.dart';
 import 'package:login_difucion/styles/colors.dart';
 import 'package:login_difucion/widgets/drawer_widget.dart';
