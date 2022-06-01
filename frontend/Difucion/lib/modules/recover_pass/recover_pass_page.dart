@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:login_difucion/modules/recover_pass/recover_pass_controller.dart';
 import 'package:login_difucion/styles/colors.dart';
@@ -22,27 +21,26 @@ class RecoverPasswordPage extends GetResponsiveView<RecoverPasswordController> {
                 : buildDesktop(controller, context)));
   }
 
-  Widget buildPhone(RecoverPasswordController controller, BuildContext context) {
+  Widget buildPhone(
+      RecoverPasswordController controller, BuildContext context) {
     return buildForm(controller, context);
   }
 
-  Widget buildDesktop( RecoverPasswordController controller, BuildContext context) {
+  Widget buildDesktop(
+      RecoverPasswordController controller, BuildContext context) {
     return Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Expanded(
-        child: buildForm(controller, context), 
-        flex: 2
-      ),
-      Expanded(
-        child: Image.asset(
-          "assets/recover_pass.png",
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(child: buildForm(controller, context), flex: 2),
+        Expanded(
+          child: Image.asset(
+            "assets/recover_pass.png",
+          ),
+          flex: 3,
         ),
-        flex: 3,
-      ),
-    ],
-  );
+      ],
+    );
   }
 
   Widget buildForm(RecoverPasswordController controller, BuildContext context) {
@@ -53,15 +51,15 @@ class RecoverPasswordPage extends GetResponsiveView<RecoverPasswordController> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               TextButton(
-                  onPressed: controller.goToLoginPage,
-                  child: const Text(
-                    '<- Regresa al inicio de sesión',
-                    style: TextStyle(
-                      color: yellowDifucion,
-                      fontSize: 24,
-                    ),
+                onPressed: controller.goToLoginPage,
+                child: const Text(
+                  '<- Regresa al inicio de sesión',
+                  style: TextStyle(
+                    color: yellowDifucion,
+                    fontSize: 24,
                   ),
                 ),
+              ),
               const SizedBox(height: 40),
               const Text(
                 "Restablecer contraseña",
@@ -90,24 +88,24 @@ class RecoverPasswordPage extends GetResponsiveView<RecoverPasswordController> {
               const SizedBox(height: 15),
               buildTextField(),
               Container(
-              padding: const EdgeInsets.symmetric(vertical: 25),
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: controller.recoverPassword,
-                style: ElevatedButton.styleFrom(
-                  primary: const Color(0xfffcc000),
-                  elevation: 5,
-                  padding: const EdgeInsets.all(14),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)),
+                padding: const EdgeInsets.symmetric(vertical: 25),
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: controller.recoverPassword,
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color(0xfffcc000),
+                    elevation: 5,
+                    padding: const EdgeInsets.all(14),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)),
+                  ),
+                  child: const Text('Restablecer Contraseña',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 24,
+                      )),
                 ),
-                child: const Text('Restablecer Contraseña',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 24,
-                    )),
               ),
-            ),
             ],
           ),
         ));

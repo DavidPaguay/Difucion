@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
-import 'package:login_difucion/model/publicacion.dart';
+import 'package:login_difucion/data/model/publicacion.dart';
+
 import 'package:pluto_grid/pluto_grid.dart';
 
 class PublicationsController extends GetxController {

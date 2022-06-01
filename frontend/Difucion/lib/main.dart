@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login_difucion/injections.dart';
-import 'package:login_difucion/pages/home_page.dart';
+import 'package:login_difucion/modules/home/home_page.dart';
 
 void main() {
   runApp(const MyApp());
