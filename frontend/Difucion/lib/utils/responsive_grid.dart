@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:login_difucion/utils/alert_config.dart';
 import 'package:responsive_grid/responsive_grid.dart';
-import 'package:taxisbot/app/utils/alert_config.dart';
 
 class Responsive {
   static final web = (MediaQuery.of(Get.context!).size.width > 700);

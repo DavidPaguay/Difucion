@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:login_difucion/utils/responsive_grid.dart';
+import 'package:login_difucion/utils/styles.dart';
 import 'package:motion_toast/motion_toast.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
-import 'package:taxisbot/app/utils/responsive_grid.dart';
-import 'package:taxisbot/app/utils/styles.dart';
 
 var alertStyle = AlertStyle(
   animationType: AnimationType.fromTop,
